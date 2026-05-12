@@ -40,3 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
     el.remove();
   });
 });
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('img[src*="preview-card.jpg"]').forEach(function(img) {
+    img.src = "preview-card.jpg?v=3";
+  });
+});
