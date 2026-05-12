@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Frequently Asked Questions | Stratos Project Area</title>
-<meta name="description" content="Website version of the Utah Governor's FAQ on the Stratos Project Area.">
+<title>Stratos Project Area FAQ | Box Elder Answers</title>
+<meta name="description" content="Detailed website version of the Utah Governor's FAQ on the Stratos Project Area.">
 <meta property="og:title" content="Stratos Project Area FAQ | Box Elder Answers">
-<meta property="og:description" content="Website version of the Utah Governor's FAQ on the Stratos Project Area.">
+<meta property="og:description" content="Detailed website version of the Utah Governor's FAQ on the Stratos Project Area.">
 <meta property="og:url" content="https://boxelderanswers.com/utah-governor-faq.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Box Elder Answers">
@@ -16,58 +16,81 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
-  .faq-document {
+  .faq-page {
     max-width: 980px;
     margin: 0 auto;
   }
 
-  .faq-title {
-    text-align: left;
-    padding-bottom: 10px;
+  .faq-cover {
+    padding: 34px 28px;
   }
 
-  .faq-title .kicker {
+  .faq-cover .kicker {
     color: #cbd8ec;
     text-transform: uppercase;
-    letter-spacing: .16em;
+    letter-spacing: .18em;
     font-weight: 900;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
-  .faq-title h1 {
+  .faq-cover h1 {
     margin: 0;
-    font-size: clamp(34px, 7vw, 72px);
+    font-size: clamp(36px, 8vw, 78px);
     line-height: .95;
     letter-spacing: .07em;
     text-transform: uppercase;
   }
 
+  .faq-cover .subtitle {
+    max-width: 760px;
+    margin-top: 18px;
+    color: #e5eefc;
+    font-size: clamp(17px, 3.7vw, 22px);
+    line-height: 1.6;
+  }
+
+  .faq-index {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 22px;
+  }
+
+  .faq-index a {
+    border: 1px solid rgba(55,128,232,.50);
+    background: rgba(9,35,78,.70);
+    border-radius: 6px;
+    padding: 14px 16px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .06em;
+    color: white;
+  }
+
   .faq-section {
-    margin-top: 24px;
-    padding-top: 22px;
-    border-top: 1px solid rgba(56,126,220,.38);
+    margin-top: 22px;
   }
 
   .faq-section h2 {
     margin: 0 0 18px;
     text-transform: uppercase;
     letter-spacing: .12em;
-    font-size: clamp(22px, 4vw, 34px);
+    font-size: clamp(24px, 4.5vw, 38px);
   }
 
   .faq-section h2::after {
     content: "";
     display: block;
-    width: 90px;
+    width: 92px;
     height: 3px;
     background: #d71920;
     margin-top: 12px;
   }
 
   .qa {
-    padding: 18px 0;
-    border-bottom: 1px solid rgba(255,255,255,.10);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,.12);
   }
 
   .qa:last-child {
@@ -75,42 +98,57 @@
   }
 
   .qa h3 {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     color: white;
-    font-size: clamp(18px, 3.6vw, 24px);
+    font-size: clamp(20px, 4vw, 28px);
     line-height: 1.25;
     text-transform: uppercase;
-    letter-spacing: .06em;
+    letter-spacing: .065em;
   }
 
   .qa p {
-    margin: 0 0 12px;
+    margin: 0 0 13px;
     color: #e5eefc;
-    line-height: 1.7;
-    font-size: clamp(16px, 3.7vw, 19px);
+    line-height: 1.72;
+    font-size: clamp(16px, 3.75vw, 20px);
   }
 
   .qa ul {
-    margin: 8px 0 0 22px;
+    margin: 10px 0 0 22px;
     padding: 0;
   }
 
   .qa li {
-    margin: 8px 0;
+    margin: 9px 0;
+    color: #e5eefc;
+    line-height: 1.62;
+    font-size: clamp(16px, 3.75vw, 20px);
+  }
+
+  .callout {
+    margin-top: 14px;
+    border-left: 4px solid #d71920;
+    padding: 14px 16px;
+    background: rgba(215,25,32,.10);
     color: #e5eefc;
     line-height: 1.6;
-    font-size: clamp(16px, 3.7vw, 19px);
   }
 
   .source-credit {
-    margin-top: 28px;
-    padding: 20px;
+    margin-top: 26px;
+    padding: 24px;
     border-left: 4px solid #d71920;
     background: rgba(215,25,32,.10);
   }
 
-  .source-credit p {
+  .source-credit h2 {
     margin-top: 0;
+  }
+
+  @media (max-width: 700px) {
+    .faq-index {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 </head>
@@ -124,153 +162,195 @@
   </div>
 </section>
 
-<main class="faq-document">
-  <section class="panel">
+<main class="faq-page">
+  <section class="panel faq-cover">
     <p><a class="btn" href="index.html#documents">← Back to Records & Receipts</a></p>
+    <div class="kicker">Frequently Asked Questions</div>
+    <h1>Stratos Project Area</h1>
+    <p class="subtitle">A detailed website-format version of the official Utah Governor’s Office FAQ, organized for easier public reading, reference, and follow-up.</p>
 
-    <div class="faq-title">
-      <div class="kicker">Frequently Asked Questions</div>
-      <h1>Stratos Project Area</h1>
+    <div class="faq-index">
+      <a href="#overview">Overview</a>
+      <a href="#process">Process & Governance</a>
+      <a href="#water">Water & Environment</a>
+      <a href="#energy">Energy & Infrastructure</a>
+      <a href="#economics">Economic Impact</a>
+      <a href="#source">Source Credit</a>
+    </div>
+  </section>
+
+  <section class="panel faq-section" id="overview">
+    <h2>Overview</h2>
+
+    <div class="qa">
+      <h3>What is the project?</h3>
+      <p>The Stratos Project Area is an energy and technology infrastructure initiative in western Box Elder County. The stated purpose is to strengthen national security and Utah’s long-term economic competitiveness.</p>
+      <p>The project supports development of a large-scale data and energy campus intended to help power artificial intelligence, cloud computing, and mission-critical defense operations.</p>
     </div>
 
-    <div class="faq-section">
-      <h2>Overview</h2>
-
-      <div class="qa">
-        <h3>What is the project?</h3>
-        <p>The Stratos Project Area is described as an energy and technology infrastructure project in western Box Elder County. It is connected to a large data and energy campus intended to support artificial intelligence, cloud computing, and defense-related operations.</p>
-      </div>
-
-      <div class="qa">
-        <h3>How large is the proposed data center?</h3>
-        <p>The larger project area covers about 40,000 acres. Most of that land is described as remaining undeveloped, with the actual data center footprint using only part of the total area. Remaining land is described as open space that may allow wildlife corridors, continued grazing, and separation from the Great Salt Lake.</p>
-      </div>
-
-      <div class="qa">
-        <h3>What benefits are being promoted?</h3>
-        <p>The listed benefits include private investment, long-term state and local revenue, construction jobs, permanent jobs, and public infrastructure funding.</p>
-      </div>
+    <div class="qa">
+      <h3>How big is the proposed data center?</h3>
+      <p>The full MIDA project area is approximately 40,000 acres. The actual data center footprint is described as only a fraction of that full project area.</p>
+      <p>The overall acreage is expected to include different types of power generation, and those power sources may have different land footprints. Solar generation would require more land than natural gas generation.</p>
+      <p>Most of the remaining land is described as staying undeveloped and available as open space, wildlife corridors, continued grazing land, and distance from the Great Salt Lake.</p>
+      <div class="callout">The official FAQ also claims that Salt Lake City is closer to the Great Salt Lake than the proposed data center.</div>
     </div>
 
-    <div class="faq-section">
-      <h2>Process and Governance</h2>
+    <div class="qa">
+      <h3>What are the project benefits?</h3>
+      <p>The promoted benefits include significant private investment, long-term local and state revenue, thousands of construction jobs, permanent careers, and funding for needed public infrastructure.</p>
+    </div>
+  </section>
 
-      <div class="qa">
-        <h3>What has been approved so far?</h3>
-        <p>MIDA approved creation of the Stratos Project Area on April 24, 2026. Box Elder County later approved an interlocal agreement and resolution connected to the new MIDA project area on May 4, 2026.</p>
-      </div>
+  <section class="panel faq-section" id="process">
+    <h2>Process and Governance</h2>
 
-      <div class="qa">
-        <h3>Did those votes approve the entire project?</h3>
-        <p>No. The approvals are presented as the beginning of a multi-step process. Future phases are expected to include planning, infrastructure coordination, state permitting, and public engagement.</p>
-      </div>
-
-      <div class="qa">
-        <h3>What studies and approvals are still required?</h3>
-        <p>Several state agencies are expected to review or oversee parts of the project:</p>
-        <ul>
-          <li>Air quality review for projected emissions and required controls.</li>
-          <li>Drinking water review for public water systems, source approval, facilities, operators, and reporting.</li>
-          <li>Water quality permits for surface water and groundwater discharges.</li>
-          <li>Water rights review for any refiled water-right change application.</li>
-          <li>Wildlife review and recommendations after formal plans are submitted.</li>
-        </ul>
-      </div>
-
-      <div class="qa">
-        <h3>Will there be more public input?</h3>
-        <p>More public comment opportunities are described as part of state review and permitting. A water-right change application includes a 20-day public comment period. Certain air-quality permits may include a 30-day public comment period and a public hearing if requested.</p>
-      </div>
-
-      <div class="qa">
-        <h3>Why is MIDA involved?</h3>
-        <p>The project is described as connected to energy resilience, computing power, data storage, national defense operations, and critical infrastructure.</p>
-      </div>
-
-      <div class="qa">
-        <h3>How can residents and local officials stay involved?</h3>
-        <p>The process is expected to continue over multiple years. A Design Review Committee is also expected, with local representation and public meetings.</p>
-      </div>
+    <div class="qa">
+      <h3>What has been approved related to creation of the project area?</h3>
+      <p>On April 24, 2026, the Military Installation Development Authority Board of Directors approved creation of the Stratos Project Area in western Box Elder County.</p>
+      <p>On May 4, 2026, the Box Elder County Commission approved an interlocal agreement and a resolution agreeing to the new MIDA project area.</p>
     </div>
 
-    <div class="faq-section">
-      <h2>Water and Environmental Impact</h2>
-
-      <div class="qa">
-        <h3>Do data centers use a lot of water?</h3>
-        <p>The project is described as using newer cooling technology rather than older evaporative cooling methods. The proposed system is described as a closed-loop chilling system with dry, air-based cooling and no continuous water draw.</p>
-      </div>
-
-      <div class="qa">
-        <h3>What is a closed-loop system?</h3>
-        <ul>
-          <li>Cooling fluid stays inside sealed pipes and equipment.</li>
-          <li>The fluid is not exposed outside the system.</li>
-          <li>It is not consumed during regular operation.</li>
-          <li>It is reused continuously.</li>
-          <li>Water use is described as limited to the initial fill and minor maintenance.</li>
-        </ul>
-      </div>
-
-      <div class="qa">
-        <h3>Where would the water come from?</h3>
-        <p>The water is described as coming from private landowners through existing private-property water rights. It is described as not coming from the Great Salt Lake.</p>
-      </div>
-
-      <div class="qa">
-        <h3>Could it affect the Great Salt Lake or groundwater?</h3>
-        <p>The water is described as existing agricultural water rather than new water. Ongoing campus demand is described as closer to a large office complex, with most regular use tied to employee facilities. Water-quality permits would be required for discharges to state waters.</p>
-      </div>
-
-      <div class="qa">
-        <h3>Will it be on the lake’s edge?</h3>
-        <p>The nearest data center is described as about 10 miles from the Great Salt Lake, with open space separating the project from the lake.</p>
-      </div>
-
-      <div class="qa">
-        <h3>What environmental review remains?</h3>
-        <p>The developer is described as needing state approvals and permits, including air quality, water quality, drinking water, and water rights approvals.</p>
-      </div>
+    <div class="qa">
+      <h3>Did these votes approve the full project?</h3>
+      <p>No. The official FAQ describes those votes as the beginning of a multi-step process, not final approval of the entire project.</p>
+      <p>Development is expected to happen in phases over multiple years. The remaining process includes additional planning, infrastructure coordination, state regulatory permitting, and community engagement.</p>
+      <p>MIDA is expected to create a Design Review Committee similar to other MIDA project areas. That committee is described as being largely represented by Box Elder County expert staff and a local landowner. Design Review Committee meetings are public.</p>
     </div>
 
-    <div class="faq-section">
-      <h2>Energy and Infrastructure</h2>
-
-      <div class="qa">
-        <h3>Will it use the existing power grid?</h3>
-        <p>The project is described as producing all power on site through stand-alone power generation, without adding pressure to the existing grid.</p>
-      </div>
-
-      <div class="qa">
-        <h3>Will it raise Utah power bills?</h3>
-        <p>The stated answer is no, because the campus would be powered independently by a newly built on-site generation plant.</p>
-      </div>
+    <div class="qa">
+      <h3>What studies and approvals are still required before construction can begin?</h3>
+      <p>Multiple state agencies are expected to provide oversight and review.</p>
+      <ul>
+        <li><strong>Division of Air Quality:</strong> evaluates projected air pollutant emissions and mandates specific control techniques.</li>
+        <li><strong>Division of Drinking Water:</strong> reviews drinking-water systems and ensures drinking water is physically separate from water used for cooling, fire protection, or power generation.</li>
+        <li><strong>Drinking-water oversight:</strong> includes source approval, facilities, certified operators, and reporting to support public health and safety.</li>
+        <li><strong>Division of Water Quality:</strong> requires permits for surface-water and groundwater discharges to waters of the state, including the Great Salt Lake.</li>
+        <li><strong>Division of Water Rights:</strong> evaluates water availability and water-right change applications.</li>
+        <li><strong>Division of Wildlife Resources:</strong> may review potential impacts and provide recommendations to minimize or mitigate impacts to wildlife once a formal plan is submitted.</li>
+      </ul>
     </div>
 
-    <div class="faq-section">
-      <h2>Economic Impact and Community Benefits</h2>
-
-      <div class="qa">
-        <h3>What benefits are listed for Box Elder County residents?</h3>
-        <p>The project is described as bringing projected permanent jobs in skilled trades, logistics, IT, and administration, along with construction jobs over a ten-year period. Tax revenues are described as available for county needs, including infrastructure and schools.</p>
-      </div>
-
-      <div class="qa">
-        <h3>What revenue is projected for the county?</h3>
-        <p>Initial phases are described as producing about $30 million in new annual county revenue. At full build-out, projected revenue is described as reaching up to $108 million annually from the energy and data center complex alone. The developer is also described as committing upfront funding to help offset early impacts on services such as law enforcement and fire.</p>
-      </div>
-
-      <div class="qa">
-        <h3>How could agriculture be affected?</h3>
-        <p>Most of the project area is described as seasonal livestock grazing land rather than crop production. The developer has indicated grazing may continue in many areas while infrastructure is phased in, and large portions of the site are expected to remain open.</p>
-      </div>
+    <div class="qa">
+      <h3>What happened with the water-right change application?</h3>
+      <p>The Division of Water Rights received a water-right change application on March 25. That application was withdrawn on May 6.</p>
+      <p>The applicant indicated intent to refile and provide more information. Each water-right application follows the same legal process, including a 20-day public comment period.</p>
     </div>
 
-    <div class="source-credit">
-      <h2>Source Credit</h2>
-      <p>Information on this page is adapted from the Utah Governor’s Office FAQ on the Stratos Project Area. This page is a website-format version for easier public reading and tracking.</p>
-      <p><a class="btn red" href="https://governor.utah.gov/wp-content/uploads/FAQ-on-Stratos-Project.pdf" target="_blank" rel="noopener">Open Original PDF</a></p>
+    <div class="qa">
+      <h3>Will there be more opportunities for public input?</h3>
+      <p>Additional public-comment opportunities are expected as the project moves through state review and permitting.</p>
+      <ul>
+        <li>Every water-right change application submitted to the Division of Water Rights includes a 20-day public comment period.</li>
+        <li>No Notice of Intent has been submitted to the Division of Air Quality as of the FAQ.</li>
+        <li>An air-quality draft permit would be subject to a 30-day public comment period and a public hearing if requested.</li>
+        <li>Division of Water Quality permits may involve public notice requirements intended to ensure community awareness and involvement.</li>
+      </ul>
     </div>
+
+    <div class="qa">
+      <h3>Why is MIDA involved?</h3>
+      <p>The Undersecretary of the Air Force asked MIDA to identify locations for independent energy and computing power. The stated reason is that energy resilience, computing power, and data storage are critical for defense operations.</p>
+      <p>The Stratos Project Area is also described as supporting federal executive orders addressing national energy resilience and development of critical infrastructure.</p>
+    </div>
+
+    <div class="qa">
+      <h3>How can the public, local officials, and county staff stay involved?</h3>
+      <p>Because development is expected to occur in phases over multiple years, the public process is not described as finished. Future steps include planning, infrastructure coordination, state regulatory permitting, and community engagement.</p>
+      <p>The future Design Review Committee is identified as another way local staff and public meetings remain part of the process.</p>
+    </div>
+  </section>
+
+  <section class="panel faq-section" id="water">
+    <h2>Water and Environmental Impact</h2>
+
+    <div class="qa">
+      <h3>Don’t data centers use a lot of water?</h3>
+      <p>Historically, data centers often relied on evaporative cooling systems and grid-connected power sources, which could indirectly require significant water.</p>
+      <p>The Stratos project is described as different because it would use a closed-loop chilling system combined with dry, air-based cooling. The FAQ states there is no continuous water draw.</p>
+    </div>
+
+    <div class="qa">
+      <h3>What is a closed-loop system?</h3>
+      <p>The cooling system is described as sealed and reusable.</p>
+      <ul>
+        <li>Cooling fluid circulates entirely within sealed piping and equipment.</li>
+        <li>The fluid is never exposed to the outside environment.</li>
+        <li>The fluid is not consumed during operation.</li>
+        <li>The same fluid is reused continuously.</li>
+      </ul>
+      <p>Water is described as being used only for the initial one-time system fill and minor maintenance.</p>
+    </div>
+
+    <div class="qa">
+      <h3>Where will the water come from?</h3>
+      <p>The development team is purchasing water from private landowners. The water is described as not coming from the Great Salt Lake.</p>
+      <p>The systems are described as using existing water rights attached to private property. The official FAQ claims this creates lower net consumption than current agricultural or ranching use and describes that reduction as a net benefit to the Great Salt Lake watershed.</p>
+      <p>The FAQ also states that the advanced closed-loop system would create less net consumption compared with traditional data center operations.</p>
+    </div>
+
+    <div class="qa">
+      <h3>Will this project affect the Great Salt Lake or local groundwater?</h3>
+      <p>The project water is described as not coming from the Great Salt Lake and not being new water. It is described as water currently used for agricultural irrigation and connected to water rights of property owners from whom land is being acquired.</p>
+      <p>Because the cooling systems reuse water internally, ongoing water demand at the campus is projected to be similar to a large office complex. Most regular water use is described as employee-related needs such as restrooms, sinks, and employee facilities.</p>
+      <p>The Division of Water Quality requires permits for all surface-water and groundwater discharges to waters of the state, including the Great Salt Lake. The FAQ identifies that permitting as the primary mechanism for pollution prevention.</p>
+    </div>
+
+    <div class="qa">
+      <h3>Will the project be on the lake’s edge?</h3>
+      <p>The nearest data center is described as about 10 miles away from the Great Salt Lake, separated by an expansive stretch of open space.</p>
+      <p>The FAQ again states that Salt Lake City is closer to the Great Salt Lake than the proposed data center.</p>
+    </div>
+
+    <div class="qa">
+      <h3>What air quality, water rights, and environmental reviews are still required?</h3>
+      <p>The developer must comply with state approvals and permits. The FAQ lists significant studies, approvals, and permits still needed, including air quality, water quality, and drinking-water permits from the Department of Environmental Quality, plus water-rights approvals from the Department of Natural Resources.</p>
+    </div>
+  </section>
+
+  <section class="panel faq-section" id="energy">
+    <h2>Energy and Infrastructure</h2>
+
+    <div class="qa">
+      <h3>Will the project draw from the existing grid or generate its own power?</h3>
+      <p>The development is described as producing all power on site. It is described as stand-alone power that will not add pressure to the existing grid.</p>
+    </div>
+
+    <div class="qa">
+      <h3>Will this raise power bills for Utah residents?</h3>
+      <p>The FAQ answer is no. It states that a newly constructed on-site power-generation plant will independently power the campus.</p>
+    </div>
+  </section>
+
+  <section class="panel faq-section" id="economics">
+    <h2>Economic Impact and Community Benefits</h2>
+
+    <div class="qa">
+      <h3>What benefits would Box Elder County residents receive?</h3>
+      <p>At full build-out, the developer has committed to a projected 2,000 permanent jobs for county residents in skilled trade, logistics, information technology, and administrative positions.</p>
+      <p>The project is also described as providing thousands of construction jobs over a ten-year period.</p>
+      <p>Tax revenues may be used at the county’s discretion to support infrastructure and community needs, including local schools. Public infrastructure for the project area is described as being paid for by the developer, not county taxpayers.</p>
+      <p>During and after construction, land is described as being leased back to local ranchers for grazing.</p>
+    </div>
+
+    <div class="qa">
+      <h3>What benefits would Box Elder County receive?</h3>
+      <p>In the initial phases, the county is expected to receive about $30 million in new annual revenue.</p>
+      <p>At full build-out, projected annual revenue could increase to $108 million from the energy and data center complex alone. The project is also described as expanding the county’s broader tax base by adding jobs to the local economy.</p>
+      <p>The developer has committed $16.2 million in upfront funding to offset initial county-budget impacts for essential services such as law enforcement and fire.</p>
+    </div>
+
+    <div class="qa">
+      <h3>How will this impact agriculture in the area?</h3>
+      <p>Most of the project area is described as seasonal livestock grazing land, not crop production. Much of the land is described as difficult to farm and only supporting limited agricultural use today.</p>
+      <p>The developer has indicated grazing can continue in many areas as infrastructure is phased in. Large portions of the site are expected to remain open even at full buildout.</p>
+    </div>
+  </section>
+
+  <section class="panel source-credit" id="source">
+    <h2>Source Credit</h2>
+    <p>This page is adapted from the Utah Governor’s Office document titled <strong>“Frequently Asked Questions: Stratos Project Area.”</strong> It is presented here in website format for easier public reading and tracking.</p>
+    <p><a class="btn red" href="https://governor.utah.gov/wp-content/uploads/FAQ-on-Stratos-Project.pdf" target="_blank" rel="noopener">Open Original PDF</a></p>
   </section>
 </main>
 
