@@ -24,10 +24,10 @@
 <style>
 :root {
   --navy:#020817;
-  --navy2:#06142b;
   --panel:#071a38;
   --blue:#1d65d8;
   --red:#d71920;
+  --red2:#ff2d35;
   --text:#ffffff;
   --muted:#c7d5ec;
   --line:rgba(56,126,220,.42);
@@ -94,7 +94,6 @@ header {
 .hero {
   max-width:1400px;
   margin:0 auto;
-  padding:0;
 }
 .hero img {
   display:block;
@@ -181,6 +180,33 @@ main {
   border-radius:5px;
   overflow:hidden;
 }
+.item.current {
+  border:2px solid var(--red2);
+  box-shadow:0 0 22px rgba(215,25,32,.55);
+  animation:pulseRed 1.6s infinite;
+}
+.item.current .date {
+  background:linear-gradient(180deg,#d71920,#8e080d);
+  color:white;
+}
+.current-badge {
+  display:inline-block;
+  color:white;
+  background:var(--red);
+  border:1px solid #ff555c;
+  border-radius:999px;
+  padding:4px 10px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:7px;
+  box-shadow:0 0 16px rgba(215,25,32,.5);
+}
+@keyframes pulseRed {
+  0%,100% { box-shadow:0 0 14px rgba(215,25,32,.35); }
+  50% { box-shadow:0 0 32px rgba(255,45,53,.85); }
+}
 .date {
   display:grid;
   place-items:center;
@@ -228,8 +254,39 @@ main {
   grid-template-columns:repeat(3,1fr);
   gap:10px;
 }
-.public-position {
+.public-position, .documents-section {
   margin-top:18px;
+}
+.documents-list {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+.doc-card {
+  display:block;
+  border:1px solid rgba(55,128,232,.50);
+  background:rgba(9,35,78,.70);
+  border-radius:6px;
+  padding:18px;
+}
+.doc-card strong {
+  display:block;
+  font-size:18px;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  margin-bottom:6px;
+}
+.doc-card span {
+  display:block;
+  color:#cbd8ec;
+  line-height:1.5;
+}
+.notice {
+  margin-top:14px;
+  border-left:4px solid var(--red);
+  padding:12px 14px;
+  background:rgba(215,25,32,.10);
+  color:#e5eefc;
 }
 footer {
   background:#020817;
@@ -248,7 +305,7 @@ footer {
 @media (max-width:950px) {
   .nav { display:none; }
   .grid { grid-template-columns:1fr; }
-  .resources { grid-template-columns:1fr; }
+  .resources, .documents-list { grid-template-columns:1fr; }
 }
 @media (max-width:600px) {
   .topbar { padding:14px; }
@@ -273,6 +330,7 @@ footer {
       <a href="#">Home</a>
       <a href="#timeline">Timeline</a>
       <a href="https://www.change.org/p/pause-project-stratos-now-box-elder-deserves-answers" target="_blank" rel="noopener">Petition</a>
+      <a href="#documents">Documents</a>
       <a href="#resources">Resources</a>
       <a href="mailto:contact@boxelderanswers.com">Contact</a>
     </nav>
@@ -302,9 +360,10 @@ footer {
     <div class="panel" id="timeline">
       <h2>Live Timeline</h2>
       <div class="timeline">
-        <div class="item">
+        <div class="item current">
           <div class="date">May 8<br>2026</div>
           <div class="event">
+            <span class="current-badge">Current Update</span>
             <strong>New state oversight announced</strong>
             <span>Utah officials announce additional review steps after public concerns.</span>
           </div>
@@ -340,16 +399,16 @@ footer {
           <strong>Sign the Petition</strong>
           Add your name. Demand transparency.
         </a>
-        <a class="card" href="https://www.change.org/p/pause-project-stratos-now-box-elder-deserves-answers" target="_blank" rel="noopener">
+        <a class="card" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.change.org%2Fp%2Fpause-project-stratos-now-box-elder-deserves-answers" target="_blank" rel="noopener">
           <strong>Share the Message</strong>
-          Spread the word and keep others informed.
+          Opens Facebook with the petition link ready to share.
         </a>
       </div>
       <h2 id="resources">Resources</h2>
       <div class="resources">
-        <a class="card" href="https://governor.utah.gov/wp-content/uploads/FAQ-on-Stratos-Project.pdf" target="_blank" rel="noopener">
+        <a class="card" href="#documents">
           <strong>Documents</strong>
-          State FAQ and public materials.
+          Source tracker built into this page.
         </a>
         <a class="card" href="https://dcfs.utah.gov/services/child-protective-services/" target="_blank" rel="noopener">
           <strong>Safety</strong>
@@ -361,6 +420,30 @@ footer {
         </a>
       </div>
     </div>
+  </section>
+
+  <section class="panel documents-section" id="documents">
+    <h2>Documents & Source Tracker</h2>
+    <p>This section keeps the main source links inside the website so people do not feel like they are being thrown off-page without context.</p>
+    <div class="documents-list">
+      <a class="doc-card" href="https://governor.utah.gov/wp-content/uploads/FAQ-on-Stratos-Project.pdf" target="_blank" rel="noopener">
+        <strong>Utah Governor FAQ</strong>
+        <span>State FAQ document about the Stratos Project and related public concerns.</span>
+      </a>
+      <a class="doc-card" href="https://kutv.com/news/local/utah-governor-posts-answers-to-questions-concerns-about-box-elder-county-data-center" target="_blank" rel="noopener">
+        <strong>KUTV Reporting</strong>
+        <span>News coverage on the governor’s answers and public concerns about the Box Elder County data center.</span>
+      </a>
+      <a class="doc-card" href="https://www.change.org/p/pause-project-stratos-now-box-elder-deserves-answers" target="_blank" rel="noopener">
+        <strong>Public Petition</strong>
+        <span>The active petition asking for the project to be paused before irreversible action begins.</span>
+      </a>
+      <a class="doc-card" href="mailto:contact@boxelderanswers.com">
+        <strong>Submit Information</strong>
+        <span>Email public records, meeting notes, corrections, or links that should be added to the timeline.</span>
+      </a>
+    </div>
+    <div class="notice">Documents open in a new tab, but this page keeps the source list organized in one place.</div>
   </section>
 
   <section class="panel public-position">
