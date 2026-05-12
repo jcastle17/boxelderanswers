@@ -20,7 +20,6 @@
 <meta name="twitter:title" content="Box Elder Answers">
 <meta name="twitter:description" content="Truth. Accountability. Community. Follow the live timeline and sign the petition.">
 <meta name="twitter:image" content="https://boxelderanswers.com/preview-card.jpg">
-
 <style>
 :root {
   --navy:#020817;
@@ -87,9 +86,7 @@ header {
 }
 .nav a:hover { border-bottom-color:var(--red); }
 .hero-wrap {
-  background:
-    linear-gradient(180deg, rgba(2,8,23,.25), rgba(2,8,23,.72)),
-    #020817;
+  background:linear-gradient(180deg, rgba(2,8,23,.25), rgba(2,8,23,.72)), #020817;
 }
 .hero {
   max-width:1400px;
@@ -144,12 +141,15 @@ main {
   padding:24px;
   box-shadow:0 14px 38px rgba(0,0,0,.35), inset 0 0 24px rgba(24,93,183,.10);
 }
+.panel h1,
 .panel h2 {
   margin:0 0 18px;
-  font-size:22px;
   text-transform:uppercase;
   letter-spacing:.08em;
 }
+.panel h1 { font-size:34px; line-height:1.1; }
+.panel h2 { font-size:22px; }
+.panel h1::after,
 .panel h2::after {
   content:"";
   display:block;
@@ -179,7 +179,9 @@ main {
   border:1px solid rgba(70,135,226,.28);
   border-radius:5px;
   overflow:hidden;
+  transition:.15s ease;
 }
+.item:hover { transform:translateY(-1px); border-color:rgba(255,255,255,.42); }
 .item.current {
   border:2px solid var(--red2);
   box-shadow:0 0 22px rgba(215,25,32,.55);
@@ -254,10 +256,10 @@ main {
   grid-template-columns:repeat(3,1fr);
   gap:10px;
 }
-.public-position, .documents-section {
+.public-position, .documents-section, .detail-section {
   margin-top:18px;
 }
-.documents-list {
+.documents-list, .media-grid, .two-col {
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:12px;
@@ -288,6 +290,18 @@ main {
   background:rgba(215,25,32,.10);
   color:#e5eefc;
 }
+.media-box {
+  min-height:180px;
+  border:1px dashed rgba(255,255,255,.28);
+  border-radius:8px;
+  background:rgba(4,16,38,.75);
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.media-box strong { font-size:18px; text-transform:uppercase; }
+.source-link { color:white; text-decoration:underline; font-weight:900; }
 footer {
   background:#020817;
   border-top:1px solid var(--line);
@@ -305,7 +319,7 @@ footer {
 @media (max-width:950px) {
   .nav { display:none; }
   .grid { grid-template-columns:1fr; }
-  .resources, .documents-list { grid-template-columns:1fr; }
+  .resources, .documents-list, .media-grid, .two-col { grid-template-columns:1fr; }
 }
 @media (max-width:600px) {
   .topbar { padding:14px; }
@@ -320,18 +334,19 @@ footer {
 </head>
 
 <body>
+
 <header>
   <div class="topbar">
-    <a class="brand" href="#">
+    <a class="brand" href="index.html">
       <span class="brand-mark">▤</span>
       <span>Box Elder<br>Answers</span>
     </a>
     <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#timeline">Timeline</a>
+      <a href="index.html">Home</a>
+      <a href="index.html#timeline">Timeline</a>
       <a href="https://www.change.org/p/pause-project-stratos-now-box-elder-deserves-answers" target="_blank" rel="noopener">Petition</a>
-      <a href="#documents">Documents</a>
-      <a href="#resources">Resources</a>
+      <a href="index.html#documents">Documents</a>
+      <a href="index.html#resources">Resources</a>
       <a href="mailto:contact@boxelderanswers.com">Contact</a>
     </nav>
   </div>
@@ -360,36 +375,45 @@ footer {
     <div class="panel" id="timeline">
       <h2>Live Timeline</h2>
       <div class="timeline">
-        <div class="item current">
+        
+        <a class="item current" href="may-8-2026-state-oversight.html">
           <div class="date">May 8<br>2026</div>
           <div class="event">
             <span class="current-badge">Current Update</span>
             <strong>New state oversight announced</strong>
-            <span>Utah officials announce additional review steps after public concerns.</span>
+            <span>Utah officials announced additional review steps after public concerns. Tap for full breakdown.</span>
           </div>
-        </div>
-        <div class="item">
+        </a>
+    
+        <a class="item" href="may-6-2026-water-right-withdrawn.html">
           <div class="date">May 6<br>2026</div>
           <div class="event">
+            
             <strong>Water-right change withdrawn</strong>
-            <span>Application withdrawn with expectation of refiling with more information.</span>
+            <span>Application withdrawn with expectation of refiling with more information. Tap for full breakdown.</span>
           </div>
-        </div>
-        <div class="item">
+        </a>
+    
+        <a class="item" href="may-4-2026-county-approval.html">
           <div class="date">May 4<br>2026</div>
           <div class="event">
+            
             <strong>County approval moves forward</strong>
-            <span>Box Elder County approves agreement tied to the project area.</span>
+            <span>Box Elder County approves agreement tied to the project area. Tap for full breakdown.</span>
           </div>
-        </div>
-        <div class="item">
+        </a>
+    
+        <a class="item" href="apr-24-2026-project-area-created.html">
           <div class="date">Apr 24<br>2026</div>
           <div class="event">
+            
             <strong>Project area created</strong>
-            <span>MIDA approves creation of the Stratos Project Area.</span>
+            <span>MIDA approves creation of the Stratos Project Area. Tap for full breakdown.</span>
           </div>
-        </div>
+        </a>
+    
       </div>
+      <p class="notice">Tap any update for the full report page.</p>
     </div>
 
     <div class="panel">
@@ -443,7 +467,6 @@ footer {
         <span>Email public records, meeting notes, corrections, or links that should be added to the timeline.</span>
       </a>
     </div>
-    <div class="notice">Documents open in a new tab, but this page keeps the source list organized in one place.</div>
   </section>
 
   <section class="panel public-position">
