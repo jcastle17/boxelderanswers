@@ -1,19 +1,16 @@
-const isUpdatePage = window.location.pathname.includes("/updates/");
-const root = isUpdatePage ? "../" : "";
-
 document.getElementById("site-header").innerHTML = `
 <header>
   <div class="topbar">
-    <a class="brand" href="${root}index.html">
+    <a class="brand" href="index.html">
       <span class="brand-mark">▤</span>
       <span>Box Elder<br>Answers</span>
     </a>
     <nav class="nav">
-      <a href="${root}index.html">Home</a>
-      <a href="${root}index.html#timeline">Timeline</a>
+      <a href="index.html">Home</a>
+      <a href="index.html#timeline">Timeline</a>
       <a href="https://www.change.org/p/pause-project-stratos-now-box-elder-deserves-answers" target="_blank" rel="noopener">Petition</a>
-      <a href="${root}index.html#documents">Documents</a>
-      <a href="${root}index.html#resources">Resources</a>
+      <a href="index.html#documents">Documents</a>
+      <a href="index.html#resources">Resources</a>
       <a href="mailto:contact@boxelderanswers.com">Contact</a>
     </nav>
   </div>
