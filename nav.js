@@ -25,3 +25,19 @@ document.getElementById("site-footer").innerHTML = `
   </div>
 </footer>
 `;
+document.addEventListener("DOMContentLoaded", function () {
+  const currentBanner = "preview-card.jpg?v=4";
+
+  document.querySelectorAll("img").forEach(function (img) {
+    const src = img.getAttribute("src") || "";
+
+    if (
+      src.includes("preview-card") ||
+      src.includes("box_elder") ||
+      src.includes("boxelder") ||
+      img.alt.toLowerCase().includes("box elder answers")
+    ) {
+      img.setAttribute("src", currentBanner);
+    }
+  });
+});
