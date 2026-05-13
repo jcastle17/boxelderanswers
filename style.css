@@ -253,3 +253,7 @@ footer {
   .panel { padding:20px; }
   .action-grid { grid-template-columns:1fr; }
 }
+.hero img,
+.hero-wrap img {
+  content: url("preview-card.jpg?v=5") !important;
+}
